@@ -7,10 +7,7 @@ var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-console.log(enemyNames);
-console.log(enemyNames.length);
-console.log(enemyNames[0]);
-console.log(enemyNames[3]);
+// fight function
 
 var fight = function (enemyName) {
     while (playerHealth > 0 && enemyHealth > 0) {
@@ -27,7 +24,7 @@ var fight = function (enemyName) {
             window.alert(playerName + ' has decided to skip this fight. Goodbye!');
             // subtract money from playerMoney for skipping
             playerMoney = playerMoney - 10;
-            console.log("playerMoney", playerMoney);
+            console.log("playerMoney", playerMoney)
             break;
           }
         }
@@ -84,9 +81,6 @@ var fight = function (enemyName) {
       
           // reset enemyHealth before starting new fight
           enemyHealth = 50;
-      
-          // use debugger to pause script from running and check what's going on at that moment in the code
-          // debugger;
       
           // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
           fight(pickedEnemyName);
@@ -175,10 +169,10 @@ var fight = function (enemyName) {
           window.alert("You did not pick a valid option. Try again.");
 
           // call shop() again to force player ot pick a valid option
-          shop();
           break;
       }
     };
 
 //start the game when the page loads
-startGame();
+
+setTimeout(startGame, 2000)
